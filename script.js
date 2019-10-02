@@ -9,6 +9,10 @@ var Location = (data,map) => {
   data.coords.latitude
  ]
   });
+  var el = document.createElement("div");
+  el.className ="fa fa-map-marker";
+  new mapboxgl.Marker(el)
+  .setLngLat([data.coords.longitude, data.coords.latitude]).setPopup(new mapboxgl.Popup({offset:25}).setHTML('<h2>Sijaintisi</h2>')).addTo(map);
 }
 
 function getMenu(data) {
@@ -54,7 +58,7 @@ function getMenu(data) {
       axios.get("https://api.digitransit.fi/geocoding/v1/search?text="+ result[i].address + ",Helsinki").then(function(response) {
         console.log(response.data)
           var el = document.createElement("div");
-        el.className ="marker";
+        el.className ="fa fa-map-marker";
         el.addEventListener('click', () =>
         {
           getMenu(result[i])
