@@ -92,6 +92,8 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+    margin-top:2px;
+    border: 1px solid white;
 }
 
 li a:hover {
@@ -144,5 +146,22 @@ section{
 
 .fa {
     cursor: pointer;
+    font-size: 20px;
+    color: #7C90A0;
+}
+ h1 {
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+     color: white;
+     margin: 10px;
+     margin-right: 15px;
+}
+a{
+    text-decoration: none;
+}
+nav {
+    display: flex;
+    text-decoration: none;
 }
 
