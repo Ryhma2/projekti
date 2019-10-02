@@ -15,26 +15,24 @@
   <body>
     <header>
       <nav>
-      Navigaatio
+        <ul>
+    <li><a class="active" href="#home">Home</a></li>
+
+    <li><a href="#about">About</a></li>
+  </ul>
     </nav>
     </header>
+    <div class="flex">
     <section>
-      <div id='map' style='width: 400px; height: 300px;'></div>
+      <div id='map'></div>
 
     </section>
     <aside>
       Asetukset
     </aside>
+  </div>
 
-<script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoib2JiMTIzIiwiYSI6ImNqdHBmY3U2ejAzczc0NGw1dmV0cmtkemcifQ.NYv9m8AnsqVHTop8Ay_k6w';
-var map = new mapboxgl.Map({
-container: 'map',
-center:[25,60.2],
-zoom:9,
-style: 'mapbox://styles/mapbox/streets-v11'
-});
-map.addControl(new mapboxgl.NavigationControl());
+<script src="script.js">
 </script>
   </body>
 </html>
