@@ -2,6 +2,7 @@ function filterRestaurant(data) {
 return data.address
 }
 
+
 var Location = (data,map) => {
   map.flyTo({
   center: [
@@ -14,6 +15,7 @@ var Location = (data,map) => {
   new mapboxgl.Marker(el)
   .setLngLat([data.coords.longitude, data.coords.latitude]).setPopup(new mapboxgl.Popup({offset:25}).setHTML('<h2>Sijaintisi</h2>')).addTo(map);
 }
+
 
 function getMenu(data) {
   var html = "";
@@ -43,11 +45,6 @@ function getMenu(data) {
   map.addControl(new mapboxgl.NavigationControl());
   map.dragRotate.disable()
   map.touchZoomRotate.disableRotation()
-  if (Modernizr.geolocation) {
-   navigator.geolocation.getCurrentPosition(function (data) {
-     Location(data,map)
-   });
- }
   axios.get('https://unicafe.fi/wp-json/swiss/v1/restaurants?lang=fi')
   .then(function (response) {
     // handle success
