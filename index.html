@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fi" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Karttasivu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans|Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9aa29b168b.js" crossorigin="anonymous"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v1.3.2/mapbox-gl.css' rel='stylesheet' />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+      Navigaatio
+    </nav>
+    </header>
+    <section>
+      <div id='map' style='width: 400px; height: 300px;'></div>
+
+    </section>
+    <aside>
+      Asetukset
+    </aside>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoib2JiMTIzIiwiYSI6ImNqdHBmY3U2ejAzczc0NGw1dmV0cmtkemcifQ.NYv9m8AnsqVHTop8Ay_k6w';
+var map = new mapboxgl.Map({
+container: 'map',
+center:[25,60.2],
+zoom:9,
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+map.addControl(new mapboxgl.NavigationControl());
+</script>
+  </body>
+</html>
