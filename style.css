@@ -141,3 +141,6 @@ section{
         height: 400px;
     }
 }
+.fa{
+	cursor: pointer;
+}

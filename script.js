@@ -54,7 +54,7 @@ function getMenu(data) {
       axios.get("https://api.digitransit.fi/geocoding/v1/search?text="+ result[i].address + ",Helsinki").then(function(response) {
         console.log(response.data)
           var el = document.createElement("div");
-        el.className ="marker";
+        el.className ="fa fa-map-marker";
         el.addEventListener('click', () =>
         {
           getMenu(result[i])
