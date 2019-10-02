@@ -48,9 +48,11 @@ table {
 }
 
 /*css alkaa*/
+*{
+    font-family: 'Roboto','Open Sans','Nunito', sans-serif;
 
+}
 body{
-  font-family: 'Roboto','Open Sans','Nunito', sans-serif;
   background: #7C90A0;
 }
 header{
@@ -62,8 +64,8 @@ header{
 .marker{
     background-image: url("map-marker.png");
     background-size: cover;
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
 }
 .flex{

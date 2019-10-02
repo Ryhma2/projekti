@@ -21,7 +21,7 @@ function getMenu(data) {
   var map = new mapboxgl.Map({
   container: 'map',
   center:[25,60.2],
-  zoom:9,
+  zoom:12,
   style: 'mapbox://styles/mapbox/streets-v11',
     pitchWithRotate: false,
     dragRotate: false,
