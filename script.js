@@ -18,7 +18,12 @@ return data.address
 
   for (item of result) {
       axios.get("https://api.digitransit.fi/geocoding/v1/search?text="+ item.address + ",Helsinki").then(function(response) {
-        console.log(response.data.features[0])
+        console.log(response.data)
+        var el = document.createElement("div");
+        el.className ="marker";
+        new mapboxgl.Marker(el)
+        .setLngLat(response.data.features[0].geometry.coordinates)
+        .setPopup(new mapboxgl.Popup({offset:25}).setHTML('<h2>perunamuusi</h2>')).addTo(map)
         }).catch(function (error) {
 
           console.log(error);

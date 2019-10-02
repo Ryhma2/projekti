@@ -47,7 +47,7 @@ table {
 	border-spacing: 0;
 }
 
-
+/*css alkaa*/
 
 body{
   font-family: 'Roboto','Open Sans','Nunito', sans-serif;
@@ -58,6 +58,13 @@ header{
   color: white;
   display: flex;
   height: 50px;
+}
+.marker{
+    background-image: url("map-marker.png");
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
 }
 .flex{
   display: flex;
@@ -87,4 +94,12 @@ li a {
 
 li a:hover {
   background-color: #4E5166;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
 }
