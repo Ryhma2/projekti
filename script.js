@@ -2,6 +2,21 @@ function filterRestaurant(data) {
 return data.address
 }
 
+
+var Location = (data,map) => {
+  map.flyTo({
+  center: [
+      data.coords.longitude,
+  data.coords.latitude
+ ]
+  });
+  var el = document.createElement("div");
+  el.className ="fa fa-map-marker";
+  new mapboxgl.Marker(el)
+  .setLngLat([data.coords.longitude, data.coords.latitude]).setPopup(new mapboxgl.Popup({offset:25}).setHTML('<h2>Sijaintisi</h2>')).addTo(map);
+}
+
+
 function getMenu(data) {
   var html = "";
   for (i = 0; i < data.menuData.menus.length; i++){
