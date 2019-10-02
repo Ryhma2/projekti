@@ -1,3 +1,6 @@
+function filterRestaurant(data) {
+return data.address
+}
 (function() {
   mapboxgl.accessToken = 'pk.eyJ1Ijoib2JiMTIzIiwiYSI6ImNqdHBmY3U2ejAzczc0NGw1dmV0cmtkemcifQ.NYv9m8AnsqVHTop8Ay_k6w';
   var map = new mapboxgl.Map({
@@ -11,12 +14,13 @@
   .then(function (response) {
     // handle success
 
-    const result = response.data.filter(data => data.address != null);
+    const result = response.data.filter(filterRestaurant);
+
   for (item of result) {
-    console.log(item)
-      axios.get("https://api.digitransit.fi/geocoding/v1/search?text="+ item.address).then(function(response) {
-      }).catch(function (error) {
-          // handle error
+      axios.get("https://api.digitransit.fi/geocoding/v1/search?text="+ item.address + ",Helsinki").then(function(response) {
+        console.log(response.data.features[0])
+        }).catch(function (error) {
+
           console.log(error);
         })
   }
