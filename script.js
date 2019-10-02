@@ -2,15 +2,6 @@ function filterRestaurant(data) {
 return data.address
 }
 
-var Location = (data,map) => {
-  map.flyTo({
-  center: [
-      data.coords.longitude,
-  data.coords.latitude
- ]
-  });
-}
-
 function getMenu(data) {
   var html = "";
   for (i = 0; i < data.menuData.menus.length; i++){
@@ -39,11 +30,6 @@ function getMenu(data) {
   map.addControl(new mapboxgl.NavigationControl());
   map.dragRotate.disable()
   map.touchZoomRotate.disableRotation()
-  if (Modernizr.geolocation) {
-   navigator.geolocation.getCurrentPosition(function (data) {
-     Location(data,map)
-   });
- }
   axios.get('https://unicafe.fi/wp-json/swiss/v1/restaurants?lang=fi')
   .then(function (response) {
     // handle success
