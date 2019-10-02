@@ -70,8 +70,8 @@ header{
   display: flex;
 }
 #map{
-  height: 500px;
-  width: 500px;
+  height: 700px;
+  width: 100%;
 }
 ul {
   list-style-type: none;
@@ -102,4 +102,40 @@ li a:hover {
 
 .mapboxgl-popup-content {
     text-align: center;
+}
+.mapboxgl-ctrl-compass {
+    display: none!important;
+}
+h3 {
+    font-size: 1.3rem;
+    background-color: #f68e5f;
+    font-weight: 700;
+    color: white;
+}
+
+p {
+    background-color: #f5dd90;
+}
+
+section {
+    flex: 50%;
+}
+
+aside {
+    flex: 50%;
+}
+@media screen and (max-width: 650px) {
+    .flex{
+        display: block;
+    }
+section{
+    display: block;
+}
+    aside{
+        display: block;
+
+    }
+    #map{
+        height: 400px;
+    }
 }
