@@ -112,11 +112,15 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
     margin-top:8px;
-    border: 1px solid #2d232e;
+    margin-right: 5px;
+    border: 1px solid #998da0;
+    border-radius: 3px;
 }
 
 li a:hover {
   background-color: var(--text-hover);
+    color: white;
+    border: 1px solid #998da0;
 }
 
 .mapboxgl-popup {
@@ -152,7 +156,7 @@ p {
 }
 
 img {
-    transition: all 2s;
+    transition: all 1s;
     border-radius: 5px;
 }
 
