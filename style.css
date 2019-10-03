@@ -51,14 +51,14 @@ table {
 /*css alkaa*/
 
 :root {
-  --main-bg-color: #7C90A0;
-	--icon-color:darkblue;
-	--location-icon-color:indianred;
-	--main-hsl-color:#007ac9;
-	--main-button-color:green;
-	--header-color:#8FAD88;
-	--text-color:white;
-	--text-hover:#4E5166;
+  --main-bg-color: #0f7173;
+	--icon-color: #4d7ea8;
+	--location-icon-color: indianred;
+	--main-hsl-color: #007ac9;
+	--main-button-color: green;
+	--header-color: #e7ecef;
+	--text-color: #e7ecef;
+	--text-hover: #998da0;
 }
 
 *{
@@ -72,7 +72,9 @@ header{
   background:  var(--header-color);
   color: white;
   display: flex;
-  height: 50px;
+  height: 60px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 .marker{
     background-image: url("map-marker.png");
@@ -81,13 +83,17 @@ header{
     width: 20px;
     cursor: pointer;
 }
+
 .flex{
   display: flex;
 }
+
 #map{
-  height: 700px;
+  height: 600px;
   width: 100%;
+    border-radius: 15px;
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -101,12 +107,12 @@ li {
 
 li a {
   display: block;
-  color: var(--text-color);
+  color: #2d232e;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
     margin-top:2px;
-    border: 1px solid var(--text-color);
+    border: 1px solid #2d232e;
 }
 
 li a:hover {
@@ -125,50 +131,43 @@ li a:hover {
 }
 h3 {
     font-size: 1.3rem;
-    background-color: #f68e5f;
     font-weight: 700;
-    color: white;
+    color: var(--text-color);
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
 }
 
 p {
-    background-color: #f5dd90;
+    color: #e7ecef;
+    margin-left: 20px;
+    margin-bottom: 5px;
 }
 
 .container {
     flex: 50%;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 aside {
+    margin-top: 5px;
     flex: 50%;
 }
-@media screen and (max-width: 650px) {
-    .flex{
-        display: block;
-    }
-.container{
-    display: block;
-}
-    aside{
-        display: block;
-
-    }
-    #map{
-        height: 400px;
-    }
-}
-
 .fa {
     cursor: pointer;
     font-size: 20px;
     color: var(--icon-color);
 }
- h1 {
+h1 {
     font-size: 30px;
     font-weight: 400;
     text-decoration: none;
-     color: white;
-     margin: 10px;
-     margin-right: 15px;
+    color: #2d232e;
+    margin: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 a{
     text-decoration: none;
@@ -182,18 +181,36 @@ nav {
 }
 
 .button {
-	background-color: var(--main-button-color); /* Green */
-   border: none;
-   color: white;
-   padding: 15px 32px;
-	 margin-bottom: 5px;
-	 margin-top: 10px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 16px;
+    background-color: var(--main-button-color); /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .bluebg{
-	background-color:  var(--main-hsl-color);
+    background-color:  var(--main-hsl-color);
 }
+@media screen and (max-width: 650px) {
+    .flex{
+        display: block;
+    }
+.container{
+    display: block;
+
+}
+    aside{
+        display: block;
+
+    }
+    #map{
+        height: 400px;
+    }
+}
+
+
