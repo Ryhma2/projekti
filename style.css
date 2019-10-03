@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import "https://fonts.googleapis.com/css?family=Nunito|Open+Sans|Roboto&display=swap";
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -121,7 +122,7 @@ p {
     background-color: #f5dd90;
 }
 
-section {
+.container {
     flex: 50%;
 }
 
@@ -132,7 +133,7 @@ aside {
     .flex{
         display: block;
     }
-section{
+.container{
     display: block;
 }
     aside{
@@ -167,4 +168,3 @@ nav {
 .red {
     color: indianred;
 }
-
