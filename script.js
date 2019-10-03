@@ -1,6 +1,8 @@
+
 function filterRestaurant(data) {
 return data.address
 }
+
 
 
 var Location = (data,map) => {
@@ -11,10 +13,11 @@ var Location = (data,map) => {
  ]
   });
   var el = document.createElement("div");
-  el.className ="fa fa-map-marker";
+  el.className ="fa fa-map-marker red";
   new mapboxgl.Marker(el)
   .setLngLat([data.coords.longitude, data.coords.latitude]).setPopup(new mapboxgl.Popup({offset:25}).setHTML('<h2>Sijaintisi</h2>')).addTo(map);
 }
+
 
 
 function getMenu(data) {
@@ -30,6 +33,8 @@ function getMenu(data) {
   document.querySelector('#data').innerHTML = html;
 
 }
+
+
 
 (function() {
   mapboxgl.accessToken = 'pk.eyJ1Ijoib2JiMTIzIiwiYSI6ImNqdHBmY3U2ejAzczc0NGw1dmV0cmtkemcifQ.NYv9m8AnsqVHTop8Ay_k6w';
@@ -64,14 +69,12 @@ function getMenu(data) {
         el.addEventListener('click', () =>
         {
           getMenu(result[i])
-          //document.querySelector('#data').innerHTML = '<p>'+result[i].title+'</p>'
         })
         new mapboxgl.Marker(el)
         .setLngLat(response.data.features[0].geometry.coordinates)
         .setPopup(new mapboxgl.Popup({offset:25}).setHTML('<h2>'+result[i].title+'</h2>')).addTo(map);
 
         }).catch(function (error) {
-
           console.log(error);
         })
   }
