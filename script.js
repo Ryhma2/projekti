@@ -4,7 +4,17 @@ return data.address
 }
 
 
-
+var coordinates = [];
+var getGoogleMapsLink = (data) => {
+  console.log(data);
+  var link = `<a class="button" href="https://www.google.com/maps/dir//${data.address}?time=${Math.floor(Date.now() / 1000)}"><i class="fab fa-google"></i></a>`
+  return link
+}
+var getHslLink = (data) => {
+  console.log(data);
+  var link = `<a class="button bluebg" href="https://reittiopas.hsl.fi/reitti/${coordinates.latitude},${coordinates.longitude}/${data.address}?time=${Math.floor(Date.now() / 1000)}"><i class="fas fa-bus"></i></a>`
+  return link
+}
 var Location = (data,map) => {
   map.flyTo({
   center: [
@@ -12,6 +22,7 @@ var Location = (data,map) => {
   data.coords.latitude
  ]
   });
+  coordinates = data.coords
   var el = document.createElement("div");
   el.className ="fa fa-map-marker red";
   new mapboxgl.Marker(el)
@@ -70,9 +81,11 @@ function getMenu(data) {
         {
           getMenu(result[i])
         })
+        var hsl = getHslLink(result[i])
+        var googleMaps = getGoogleMapsLink(result[i])
         new mapboxgl.Marker(el)
         .setLngLat(response.data.features[0].geometry.coordinates)
-        .setPopup(new mapboxgl.Popup({offset:25}).setHTML('<h2>'+result[i].title+'</h2>')).addTo(map);
+        .setPopup(new mapboxgl.Popup({offset:25}).setHTML('<h2>'+result[i].title+'</h2>' + hsl + googleMaps)).addTo(map);
 
         }).catch(function (error) {
           console.log(error);

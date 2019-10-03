@@ -49,15 +49,27 @@ table {
 }
 
 /*css alkaa*/
+
+:root {
+  --main-bg-color: #7C90A0;
+	--icon-color:darkblue;
+	--location-icon-color:indianred;
+	--main-hsl-color:#007ac9;
+	--main-button-color:green;
+	--header-color:#8FAD88;
+	--text-color:white;
+	--text-hover:#4E5166;
+}
+
 *{
     font-family: 'Roboto','Open Sans','Nunito', sans-serif;
 
 }
 body{
-  background: #7C90A0;
+  background: var(--main-bg-color);
 }
 header{
-  background: #8FAD88;
+  background:  var(--header-color);
   color: white;
   display: flex;
   height: 50px;
@@ -89,16 +101,16 @@ li {
 
 li a {
   display: block;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
     margin-top:2px;
-    border: 1px solid white;
+    border: 1px solid var(--text-color);
 }
 
 li a:hover {
-  background-color: #4E5166;
+  background-color: var(--text-hover);
 }
 
 .mapboxgl-popup {
@@ -148,7 +160,7 @@ aside {
 .fa {
     cursor: pointer;
     font-size: 20px;
-    color: #7C90A0;
+    color: var(--icon-color);
 }
  h1 {
     font-size: 30px;
@@ -166,5 +178,22 @@ nav {
     text-decoration: none;
 }
 .red {
-    color: indianred;
+    color: var(--location-icon-color);
+}
+
+.button {
+	background-color: var(--main-button-color); /* Green */
+   border: none;
+   color: white;
+   padding: 15px 32px;
+	 margin-bottom: 5px;
+	 margin-top: 10px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+}
+
+.bluebg{
+	background-color:  var(--main-hsl-color);
 }
