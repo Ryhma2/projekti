@@ -158,6 +158,9 @@ p {
 img {
     transition: all 1s;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
 img:hover {
