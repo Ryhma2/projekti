@@ -103,6 +103,8 @@ ul {
 
 li {
   float: left;
+	width: 95.7875px;
+
 }
 
 li a {
@@ -220,6 +222,14 @@ nav {
     #map{
         height: 400px;
     }
+
 }
-
-
+@media screen and (max-width:430px) {
+	li{
+		display: block;
+	}
+	header{
+		height: 120px;
+		display: block;
+	}
+}
