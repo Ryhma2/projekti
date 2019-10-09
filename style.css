@@ -72,7 +72,7 @@ header{
   background:  var(--header-color);
   color: white;
   display: flex;
-  height: 80px;
+  height: 70px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
 }
@@ -111,9 +111,9 @@ li a {
   display: block;
   color: #2d232e;
   text-align: center;
-  padding: 14px 16px;
+    padding: 13px 13px;
   text-decoration: none;
-    margin-top:8px;
+    margin-top:11px;
     margin-right: 5px;
     border: 1px solid #998da0;
     border-radius: 3px;
@@ -183,7 +183,7 @@ h1 {
     font-weight: 400;
     text-decoration: none;
     color: #2d232e;
-    margin-top: 5px;
+    margin-top: 7px;
     margin-right: 15px;
     margin-left: 15px;
 }
