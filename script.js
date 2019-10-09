@@ -6,12 +6,10 @@ return data.address
 
 var coordinates = [];
 var getGoogleMapsLink = (data) => {
-  console.log(data);
   var link = `<a class="button" href="https://www.google.com/maps/dir//${data.address}?time=${Math.floor(Date.now() / 1000)}"><i class="fab fa-google"></i></a>`
   return link
 }
 var getHslLink = (data) => {
-  console.log(data);
   var link = `<a class="button bluebg" href="https://reittiopas.hsl.fi/reitti/${coordinates.latitude},${coordinates.longitude}/${data.address}?time=${Math.floor(Date.now() / 1000)}"><i class="fas fa-bus"></i></a>`
   return link
 }
@@ -38,7 +36,6 @@ function getMenu(data) {
     html += "<h3>"+data.menuData.menus[i].date+'</h3>';
     for (j = 0; j < data.menuData.menus[i].data.length; j++){
       html += "<p>"+data.menuData.menus[i].data[j].name+"</p>"
-      console.log(data.menuData.menus[i].data[j].name)
     }
   }
   document.querySelector('#data').innerHTML = html;
@@ -74,7 +71,6 @@ function getMenu(data) {
 
   for (let i = 0; i <= result.length; i++) {
       axios.get("https://api.digitransit.fi/geocoding/v1/search?text="+ result[i].address + ",Helsinki").then(function(response) {
-        console.log(response.data)
           var el = document.createElement("div");
         el.className ="fa fa-map-marker";
         el.addEventListener('click', () =>
@@ -95,7 +91,7 @@ function getMenu(data) {
   })
   .catch(function (error) {
     // handle error
-    console.log(error);
+
   })
   .finally(function () {
     // always executed
