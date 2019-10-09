@@ -63,7 +63,7 @@ function getMenu(data) {
      Location(data,map)
    });
  }
-  axios.get('https://unicafe.fi/wp-json/swiss/v1/restaurants?lang=fi')
+  axios.get('https://unicafe.fi/wp-json/swiss/v1/restaurants?lang=en')
   .then(function (response) {
     // handle success
 
