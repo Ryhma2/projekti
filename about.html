@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>About Us</title>
+
     <link rel="stylesheet" href="style.css">
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -28,7 +29,14 @@
         <div>
             <img src="DSC03896.jpg" alt="Omar Benchbana" width="200px"/>
             <img src="DSC03912.jpg" alt="Andrei Hakala" width="200px"/>
-
+            <video id='my-video' class='video-js' controls preload='metadata' width="1920px"
+poster='banner.jpg' data-setup='{}'>
+  <source src='video.mp4' type='video/mp4'>
+  <p class='vjs-no-js'>
+    To view this video please enable JavaScript, and consider upgrading to a web browser that
+    <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+  </p>
+</video>
         </div>
     </div>
 
@@ -37,5 +45,6 @@
 
 <script src="about.js">
 </script>
+
 </body>
 </html>
