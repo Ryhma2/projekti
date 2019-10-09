@@ -214,6 +214,33 @@ nav {
 .bluebg{
     background-color:  var(--main-hsl-color);
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+	margin-bottom: calc(18% - 100px);
+	margin-top: 5vh;
+
+}
+
+.grid-pic{
+	display: initial !important;
+}
+
+.grid-item2 {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+	grid-column: 4 / 5;
+
+}
+.grid-item1{
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+	grid-column: 2 / 3;
+
+}
 @media screen and (max-width: 650px) {
     .flex{
         display: block;
@@ -238,6 +265,8 @@ nav {
 	header{
 		height: 20vh;
 		display: block;
+		margin-bottom: 30px;
+
 	}
 	li{
 		height: 2em;
