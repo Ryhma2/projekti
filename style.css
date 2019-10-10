@@ -280,5 +280,8 @@ nav {
 
 }
 video {
-  width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 20px;
+  width: 80%;
 }
