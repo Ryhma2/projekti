@@ -225,6 +225,7 @@ nav {
 
 .grid-pic{
 	display: initial !important;
+	width:50%;
 }
 
 .grid-item2 {
@@ -276,6 +277,12 @@ nav {
 	}
 	nav{
 		height: 20vh;
+	}
+	.grid-container{
+		display: block;
+	}
+	.grid-pic{
+		width: 80%;
 	}
 
 }
